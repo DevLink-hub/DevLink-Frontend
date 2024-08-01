@@ -5,6 +5,7 @@ import streamerImage from '../../assets/images/streamer.webp';
 import interiorImage from '../../assets/images/interior.webp';
 import packageImage from '../../assets/images/package.webp';
 import mobileImage from '../../assets/images/mobile.webp';
+import hireImage from '../../assets/images/hire.webp';
 
 
 const imageVariants = {
@@ -22,11 +23,20 @@ const Landing = () => {
   return (
     <div>
       {/* First Section */}
-      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${artImage})` }}>
+      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${hireImage})` }}>
+      {/* <div>
+        <video 
+          src={bgVideo} 
+          autoPlay 
+          loop 
+          muted 
+          className="object-cover w-[100vw] h-[100vh]"
+        />
+      </div> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-start justify-center h-full text-left text-white p-8 ml-16">
+        <div className="relative z-10 flex flex-col items-start justify-center h-full text-left text-[#038C7F] p-8 ml-16">
           <h1 className="text-5xl font-bold mb-4">Hire the best <br /> freelancers for any <br /> job, online.</h1>
-          <ul className="text-lg mb-8 space-y-2">
+          <ul className="text-lg mb-8 space-y-2 text-white">
             <li>World's largest freelance marketplace</li>
             <li>Any job you can possibly think of</li>
             <li>Save up to 90% & get quotes for free</li>
@@ -34,7 +44,7 @@ const Landing = () => {
           </ul>
           <div className="flex space-x-4">
             <motion.button
-              className="bg-pink-500 text-white font-bold py-2 px-4 rounded hover:bg-pink-600"
+              className="bg-[#123834] text-white font-bold py-2 px-4 rounded hover:bg-[#038C7F]"
               whileHover={{ scale: 1.05 }}
             >
               Hire a Freelancer

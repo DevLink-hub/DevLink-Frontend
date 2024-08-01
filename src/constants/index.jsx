@@ -4,6 +4,14 @@ const K = {
       name: "Home",
       path: "/",
     },
+    {
+      name: "Hire Freelancers",
+      path: "hire",
+    },
+    {
+      name: "Find Freelancers",
+      path: "find",
+    },
 
     {
       name: "Login",
