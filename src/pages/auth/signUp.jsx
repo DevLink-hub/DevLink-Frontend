@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'animate.css';
 import 'tailwindcss/tailwind.css';
 import { Mail, Eye, EyeOff } from 'lucide-react';
+import googleImage from '../../assets/images/google.jpg';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,9 +12,9 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <div className="flex items-center justify-center h-screen bg-gray-100 mt-12">
       <div className="p-10 bg-white rounded-lg shadow-xl animate__animated animate__bounceIn animate__delay-1s">
-        <h1 className="text-5xl font-extrabold text-center text-indigo-600 animate__animated animate__pulse animate__infinite">
+        <h1 className="text-5xl font-extrabold text-center text-[#038C7F] animate__animated animate__pulse animate__infinite">
           DevLink!
         </h1>
         <div className="mt-8 space-y-6">
@@ -21,7 +22,7 @@ const SignUp = () => {
             <button
               className="flex items-center justify-center w-full px-4 py-2 mb-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google logo" className="w-5 h-5 mr-3" />
+              <img src={googleImage} alt="Google logo" className="w-5 h-5 mr-3" /> 
               Continue with Google
             </button>
           </div>
@@ -100,14 +101,14 @@ const SignUp = () => {
                   className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" 
                 />
                 <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
-                  I agree to the <a href="#" className="text-indigo-600 hover:text-indigo-500">User Agreement</a> and <a href="#" className="text-indigo-600 hover:text-indigo-500">Privacy Policy</a>.
+                  I agree to the <a href="#" className="text-[#038C7F] hover:text-indigo-500">User Agreement</a> and <a href="#" className="text-[#038C7F] hover:text-indigo-500">Privacy Policy</a>.
                 </label>
               </div>
             </div>
             <div className="animate__animated animate__fadeIn animate__delay-4s">
               <button 
                 type="submit" 
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#123834] hover:bg-[#038C7F] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Join DevLink!
               </button>
