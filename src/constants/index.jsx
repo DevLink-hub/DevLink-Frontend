@@ -9,7 +9,7 @@ const K = {
       path: "hire",
     },
     {
-      name: "Find Freelancers",
+      name: "Find Jobs",
       path: "find",
     },
 
