@@ -1,9 +1,10 @@
 import React from 'react';
 import { EnvelopeIcon, UserIcon, ComputerDesktopIcon, ShieldCheckIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row mt-12">
       <div className="bg-blue-100 p-6 flex-1">
         <h2 className="text-lg font-semibold mb-4">
           You are almost ready to start earning money as a freelancer, simply complete the following steps:
@@ -17,7 +18,9 @@ const Dashboard = () => {
         <div className="flex items-center mb-4">
           <UserIcon className="h-5 w-5 mr-2" />
           <span>Update your profile</span>
-          <button className="ml-auto text-[#123834]">Profile Page</button>
+          <Link to="/profile" className="ml-auto text-[#123834]">
+            Profile Page
+          </Link>
         </div>
         <div className="flex items-center mb-4">
           <ComputerDesktopIcon className="h-5 w-5 mr-2" />

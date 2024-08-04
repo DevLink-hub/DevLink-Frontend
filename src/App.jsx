@@ -7,6 +7,7 @@ import RootLayout from './layouts/rootLayout';
 import Hire from './pages/hire/index.jsx';
 import Find from './pages/find/index.jsx';
 import Dashboard from './pages/dashboard/index.jsx';
+import Profile from './pages/profile/index.jsx';
 
 
 
@@ -41,6 +42,10 @@ function App() {
         {
           path: 'dashboard',
           element: <Dashboard />
+        },
+        {
+          path: 'profile',
+          element: <Profile />
         }
 
       ]

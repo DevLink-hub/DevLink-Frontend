@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'animate.css';
 import 'tailwindcss/tailwind.css';
 import { Mail, Eye, EyeOff } from 'lucide-react';
-import googleImage from '../../assets/images/google.jpg';
+// import googleImage from '../../assets/images/google.jpg';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -55,7 +55,7 @@ const Login = () => {
             </div>
           </div>
           <div className="flex items-center justify-between animate__animated animate__fadeInUp animate__delay-3s">
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <input 
                 id="remember_me" 
                 name="remember_me" 
@@ -65,7 +65,7 @@ const Login = () => {
               <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
                 Remember me
               </label>
-            </div>
+            </div> */}
             <div className="text-sm">
               <a href="#" className="font-medium text-[#038C7F] hover:text-indigo-500">
                 Forgot your password?
@@ -82,12 +82,12 @@ const Login = () => {
           </div>
         </form>
         <div className="animate__animated animate__fadeIn animate__delay-1s">
-            <button
+            {/* <button
               className="flex items-center justify-center w-full px-4 py-2 mb-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50"
             >
               <img src={googleImage} alt="Google logo" className="w-5 h-5 mr-3" /> 
               Continue with Google
-            </button>
+            </button> */}
           </div>
       </div>
     </div>
