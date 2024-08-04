@@ -18,7 +18,7 @@ const Dashboard = () => {
         <div className="flex items-center mb-4">
           <UserIcon className="h-5 w-5 mr-2" />
           <span>Update your profile</span>
-          <Link to="/profile" className="ml-auto text-[#123834]">
+          <Link to="/profile" className="ml-auto bg-[#123834] text-white px-4 py-2 rounded-lg">
             Profile Page
           </Link>
         </div>

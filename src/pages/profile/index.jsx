@@ -4,6 +4,7 @@ import EducationForm from '../../components/EducationForm';
 import WorkExperienceForm from '../../components/WorkExperienceForm';
 import PortfolioForm from '../../components/PortfolioForm';
 import ProfileDisplay from '../../components/ProfileDisplay';
+import ProfileHeader from '../../components/ProfileHeader';
 
 const Profile = () => {
   const [profile, setProfile] = useState({});
@@ -36,8 +37,16 @@ const Profile = () => {
     setShowPortfolioForm(false); // Hide form after submission
   };
 
+  const coverPhoto = "/path/to/coverPhoto"; // Replace with actual cover photo path or state
+  const profilePhoto = "/path/to/profilePhoto"; // Replace with actual profile photo path or state
+
   return (
     <div className="container mx-auto p-4 mt-12">
+      <ProfileHeader 
+        initialCoverPhoto={coverPhoto} 
+        initialProfilePhoto={profilePhoto} 
+        onViewClient={() => alert("View Client Profile")} 
+      />
       <h1 className="text-2xl mb-4">Profile Management</h1>
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2 pr-4">

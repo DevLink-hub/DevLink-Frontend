@@ -1,24 +1,8 @@
 import React from 'react';
-// import ProfileHeader from '../components/ProfileHeader';
-// import profilePhoto from '../path/to/profilePhoto.png'; // Add correct path for profile photo
 
 const ProfileDisplay = ({ profile = {}, education = [], workExperience = [], portfolio = [] }) => {
-  const handleUploadCover = () => {
-    // Handle upload cover photo functionality
-  };
-
-  const handleViewClient = () => {
-    // Handle view client profile functionality
-  };
-
   return (
     <div className="pt-40">
-      {/* <ProfileHeader 
-        coverPhoto="/path/to/coverPhoto.png" // Replace with the actual path
-        // profilePhoto={profilePhoto}
-        onUploadCover={handleUploadCover}
-        onViewClient={handleViewClient}
-      /> */}
       <h2 className="text-xl mb-4">Profile</h2>
       <div className="mb-4">
         <p><strong>Name:</strong> {profile.name}</p>

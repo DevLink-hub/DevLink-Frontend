@@ -6,6 +6,7 @@ import colorImage from '../../assets/images/color.webp';
 import marjanImage from '../../assets/images/marjan.webp';
 import gauravImage from '../../assets/images/gaurav.webp';
 import { motion } from 'framer-motion';
+import 'animate.css';
 
 const Hire = () => {
   return (
@@ -13,7 +14,7 @@ const Hire = () => {
       <div className="relative h-screen bg-cover bg-center mt-8" style={{ backgroundImage: `url(${hireImage})` }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-start justify-center h-full text-left text-[#038C7F] p-8 ml-16">
-          <h1 className="text-5xl font-bold mb-4">Hire expert<br /> Javascript Developers <br /> for any job.</h1>
+          <h1 className="text-5xl font-bold mb-4">Hire expert<br /> JavaScript Developers <br /> for any job.</h1>
           <ul className="text-lg mb-8 space-y-2 text-white">
             <li>Millions of people use</li>
             <li>DevLink to turn their ideas</li>
@@ -56,8 +57,8 @@ const Hire = () => {
         </div>
       </div>
 
-      <div className='mt-12'>
-        <h2 className="text-2xl font-semibold mb-4">Hire Javascript Developers</h2>
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4 animate__animated animate__fadeInUp">Hire JavaScript Developers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { name: 'Seabit Media', rate: '$15 per hour', jobs: '6391 jobs', rating: '4.9', img: seaImage, iconColor: 'blue-500' },
@@ -65,7 +66,7 @@ const Hire = () => {
             { name: 'Marjan A.', rate: '$130 per hour', jobs: '4384 jobs', rating: '4.9', img: marjanImage, iconColor: 'red-500' },
             { name: 'Gaurav C.', rate: '$40 per hour', jobs: '4362 jobs', rating: '4.9', img: gauravImage, iconColor: 'green-500' },
           ].map((developer, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+            <motion.div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center animate__animated animate__fadeInUp animate__delay-1s" whileHover={{ scale: 1.05 }}>
               <img src={developer.img} alt={developer.name} className="w-24 h-24 rounded-full mb-4" />
               <h3 className="text-lg font-semibold">{developer.name}</h3>
               <p className="text-gray-600">{developer.rate}</p>
@@ -78,13 +79,13 @@ const Hire = () => {
                 <span>{developer.rating}</span>
               </div>
               <button className="bg-[#038C7F] text-white px-4 py-2 rounded-lg">View Profile</button>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-6">How hiring a Javascript Developer works</h2>
+        <h2 className="text-2xl font-semibold mb-6">How hiring a JavaScript Developer works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {[
             { title: 'Post a job', description: 'Tell us what you need done in seconds.', icon: UserCircleIcon },
@@ -92,7 +93,7 @@ const Hire = () => {
             { title: 'Track progress', description: 'Chat with your freelancer and review their work 24/7.', icon: DocumentTextIcon },
             { title: 'Pay safely', description: "Only pay when you're completely satisfied.", icon: ShieldExclamationIcon },
           ].map((step, index) => (
-            <div key={index} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md">
+            <div key={index} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md animate__animated animate__fadeInUp animate__delay-1s">
               <step.icon className="h-12 w-12 text-[#038C7F] mb-4" />
               <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
               <p className="text-gray-700">{step.description}</p>

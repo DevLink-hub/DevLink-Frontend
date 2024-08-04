@@ -74,7 +74,7 @@ const Landing = () => {
               <h3 className="text-2xl font-semibold mb-2">Real Art.</h3>
               <p className="mb-4">$200 USD in 7 days.</p>
               <motion.button
-                className="bg-pink-500 text-white font-bold py-2 px-4 rounded hover:bg-pink-600"
+                className="bg-[#038C7F] text-white font-bold py-2 px-4 rounded hover:bg-[#038C7F]"
                 whileHover={{ scale: 1.05 }}
               >
                 Discover
@@ -103,7 +103,7 @@ const Landing = () => {
                   <h3 className="text-2xl font-semibold mb-2">{image.label}</h3>
                   <p className="mb-4">{image.price}</p>
                   <motion.button
-                    className="bg-pink-500 text-white font-bold py-2 px-4 rounded hover:bg-pink-600"
+                    className="bg-[#038C7F] text-white font-bold py-2 px-4 rounded hover:bg-[#038C7F]"
                     whileHover={{ scale: 1.05 }}
                   >
                     Discover
