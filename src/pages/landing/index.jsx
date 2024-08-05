@@ -5,8 +5,7 @@ import streamerImage from '../../assets/images/streamer.webp';
 import interiorImage from '../../assets/images/interior.webp';
 import packageImage from '../../assets/images/package.webp';
 import mobileImage from '../../assets/images/mobile.webp';
-import hireImage from '../../assets/images/hire.webp';
-
+import heroVideo from '../../assets/images/hero.mp4';
 
 const imageVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -23,16 +22,14 @@ const Landing = () => {
   return (
     <div>
       {/* First Section */}
-      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${hireImage})` }}>
-      {/* <div>
+      <div className="relative h-screen bg-black">
         <video 
-          src={bgVideo} 
+          src={heroVideo} 
           autoPlay 
           loop 
           muted 
-          className="object-cover w-[100vw] h-[100vh]"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-      </div> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-start justify-center h-full text-left text-[#038C7F] p-8 ml-16">
           <h1 className="text-5xl font-bold mb-4">Hire the best <br /> freelancers for any <br /> job, online.</h1>
@@ -55,6 +52,24 @@ const Landing = () => {
             >
               Earn Money Freelancing
             </motion.button>
+          </div>
+        </div>
+      </div>
+
+      {/* New Section */}
+      <div className="h-screen flex flex-col justify-center items-center bg-[#F8F9FA] p-8">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl font-bold text-[#123834]">The world's largest marketplace</h2>
+          <p className="text-lg mt-4">Millions of users, from small businesses to large enterprises, entrepreneurs to startups, use DevLink to turn their ideas into reality.</p>
+        </div>
+        <div className="flex space-x-16">
+          <div className="text-center">
+            <h3 className="text-5xl font-bold text-[#038C7F]">75.1M</h3>
+            <p className="text-lg mt-2">REGISTERED USERS</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-5xl font-bold text-[#038C7F]">24.0M</h3>
+            <p className="text-lg mt-2">TOTAL JOBS POSTED</p>
           </div>
         </div>
       </div>
@@ -112,6 +127,24 @@ const Landing = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+      </div>
+
+      {/* As Featured In Section */}
+      <div className="bg-[#123834] p-8">
+        <div className="container mx-auto flex flex-col items-center">
+          <h2 className="text-2xl text-white font-bold mb-4">As featured in</h2>
+          <div className="flex flex-wrap justify-center gap-8">
+            <img src="/path/to/newyorktimes-logo.png" alt="The New York Times" className="h-12" />
+            <img src="/path/to/businessinsider-logo.png" alt="Business Insider" className="h-12" />
+            <img src="/path/to/inc-logo.png" alt="Inc" className="h-12" />
+            <img src="/path/to/forbes-logo.png" alt="Forbes" className="h-12" />
+            <img src="/path/to/cnbc-logo.png" alt="CNBC" className="h-12" />
+            <img src="/path/to/entrepreneur-logo.png" alt="Entrepreneur" className="h-12" />
+            <img src="/path/to/bbc-logo.png" alt="BBC" className="h-12" />
+            <img src="/path/to/engadget-logo.png" alt="Engadget" className="h-12" />
+            <img src="/path/to/venturebeat-logo.png" alt="VentureBeat" className="h-12" />
+          </div>
         </div>
       </div>
     </div>

@@ -101,7 +101,7 @@ const SignUp = () => {
                   className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" 
                 />
                 <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
-                  I agree to the <a href="#" className="text-[#038C7F] hover:text-indigo-500">User Agreement</a> and <a href="#" className="text-[#038C7F] hover:text-indigo-500">Privacy Policy</a>.
+                  I agree to the <a href="#" className="text-[#038C7F] hover:text-indigo-500">terms</a>And<a href="#" className="text-[#038C7F] hover:text-indigo-500">Condition</a>.
                 </label>
               </div>
             </div>

@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto, onViewClient }) => {
   const [coverPhoto, setCoverPhoto] = useState(initialCoverPhoto);
   const [profilePhoto, setProfilePhoto] = useState(initialProfilePhoto);
+  const [showForm, setShowForm] = useState(false);
+  const [bio, setBio] = useState('');
+  const [location, setLocation] = useState('');
+  const [skills, setSkills] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
 
   const handleCoverPhotoChange = (e) => {
     const file = e.target.files[0];
@@ -24,6 +29,15 @@ const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto, onViewClient })
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const handleAddProfileClick = () => {
+    setShowForm(!showForm);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setShowForm(false);
   };
 
   return (
@@ -56,14 +70,66 @@ const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto, onViewClient })
         </div>
         <div className="ml-4">
           <h2 className="text-xl font-semibold">Stephen Sappor</h2>
-          <p className="text-gray-600">Front-end Web Dev | AWS Cloud Practitioner | Food QA & QC</p>
-          <p className="text-gray-500">Accra, Greater Accra Region, Ghana</p>
-          <button className="text-blue-600 flex items-center mt-2">
+          {bio && <p className="text-gray-600">{bio}</p>}
+          {location && <p className="text-gray-500">{location}</p>}
+          {skills && <p className="text-gray-600">Skills: {skills}</p>}
+          {phoneNumber && <p className="text-gray-600">Phone: {phoneNumber}</p>}
+          <button className="text-blue-600 flex items-center mt-2" onClick={handleAddProfileClick}>
             <svg className="h-5 w-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v8m4-4H8"></path>
             </svg>
-            Add profile
+            {showForm ? 'Cancel' : 'Add profile'}
           </button>
+          {showForm && (
+            <form onSubmit={handleFormSubmit} className="mt-4 space-y-4">
+              <div>
+                <label htmlFor="bio" className="block text-sm font-medium text-gray-700">Bio</label>
+                <input
+                  type="text"
+                  id="bio"
+                  className="mt-1 p-2 border rounded-md w-full"
+                  value={bio}
+                  onChange={(e) => setBio(e.target.value)}
+                />
+              </div>
+              <div>
+                <label htmlFor="location" className="block text-sm font-medium text-gray-700">Location</label>
+                <input
+                  type="text"
+                  id="location"
+                  className="mt-1 p-2 border rounded-md w-full"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
+              <div>
+                <label htmlFor="skills" className="block text-sm font-medium text-gray-700">Skills</label>
+                <input
+                  type="text"
+                  id="skills"
+                  className="mt-1 p-2 border rounded-md w-full"
+                  value={skills}
+                  onChange={(e) => setSkills(e.target.value)}
+                />
+              </div>
+              <div>
+                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  className="mt-1 p-2 border rounded-md w-full"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                />
+              </div>
+              <button
+                type="submit"
+                className="mt-2 bg-blue-600 text-white py-2 px-4 rounded-md"
+              >
+                Save
+              </button>
+            </form>
+          )}
         </div>
         <button className="ml-auto bg-white py-1 px-3 border rounded-md shadow-md" onClick={onViewClient}>
           View Client Profile
