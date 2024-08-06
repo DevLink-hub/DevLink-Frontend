@@ -8,6 +8,7 @@ import Hire from './pages/hire/index.jsx';
 import Find from './pages/find/index.jsx';
 import Dashboard from './pages/dashboard/index.jsx';
 import Profile from './pages/profile/index.jsx';
+import ClientProfile from './pages/client/index.jsx';
 
 
 
@@ -46,6 +47,10 @@ function App() {
         {
           path: 'profile',
           element: <Profile />
+        },
+        {
+          path: 'client',
+          element: <ClientProfile />
         }
 
       ]

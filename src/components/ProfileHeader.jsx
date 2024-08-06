@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto, onViewClient }) => {
+const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto }) => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const [coverPhoto, setCoverPhoto] = useState(initialCoverPhoto);
   const [profilePhoto, setProfilePhoto] = useState(initialProfilePhoto);
   const [showForm, setShowForm] = useState(false);
@@ -38,6 +41,10 @@ const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto, onViewClient })
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setShowForm(false);
+  };
+
+  const onViewClient = () => {
+    navigate('/client'); // Navigate to the /client path
   };
 
   return (
