@@ -66,7 +66,7 @@ const SignUp = () => {
       lastName: data.lastName,
       userName: data.username,
       password: data.password,
-      confirmedPassword: data.password,
+      // confirmedPassword: data.password,
       email: data.email,
     };
     if (data.otherNames) {
@@ -116,26 +116,26 @@ const SignUp = () => {
               <div className="flex space-x-4 animate__animated animate__fadeIn animate__delay-2s">
                 <div className="flex-1">
                   <label htmlFor="first_name" className="sr-only">First Name</label>
-                  <input 
-                    id="first_name" 
-                    name="first_name" 
-                    type="text" 
-                    required 
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
-                    placeholder="First Name" 
+                  <input
+                    id="first_name"
+                    name="first_name"
+                    type="text"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="First Name"
                     {...register('firstName', { required: true })}
                   />
                   {errors.firstName && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="flex-1">
                   <label htmlFor="last_name" className="sr-only">Last Name</label>
-                  <input 
-                    id="last_name" 
-                    name="last_name" 
-                    type="text" 
-                    required 
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
-                    placeholder="Last Name" 
+                  <input
+                    id="last_name"
+                    name="last_name"
+                    type="text"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Last Name"
                     {...register('lastName', { required: true })}
                   />
                   {errors.lastName && <span className="text-red-500">This field is required</span>}
@@ -143,13 +143,13 @@ const SignUp = () => {
               </div>
               <div className="animate__animated animate__fadeIn animate__delay-2s">
                 <label htmlFor="user_name" className="sr-only">User Name</label>
-                <input 
-                  id="user_name" 
-                  name="user_name" 
-                  type="text" 
-                  required 
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
-                  placeholder="User Name" 
+                <input
+                  id="user_name"
+                  name="user_name"
+                  type="text"
+                  required
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="User Name"
                   {...register('username', { required: true })}
                 />
                 {errors.username && <span className="text-red-500">This field is required</span>}
@@ -167,14 +167,14 @@ const SignUp = () => {
                 <label htmlFor="email" className="sr-only">Email address</label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 w-5 h-5 text-gray-500" />
-                  <input 
-                    id="email" 
-                    name="email" 
-                    type="email" 
-                    autoComplete="email" 
-                    required 
-                    className="appearance-none rounded-none relative block w-full pl-10 pr-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
-                    placeholder="Email address" 
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    className="appearance-none rounded-none relative block w-full pl-10 pr-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Email address"
                     {...register('email', { required: true })}
                   />
                   {errors.email && <span className="text-red-500">This field is required</span>}
@@ -183,14 +183,14 @@ const SignUp = () => {
               <div className="animate__animated animate__fadeInRight animate__delay-2s">
                 <label htmlFor="password" className="sr-only">Password</label>
                 <div className="relative">
-                  <input 
-                    id="password" 
-                    name="password" 
-                    type={showPassword ? 'text' : 'password'} 
-                    autoComplete="current-password" 
-                    required 
-                    className="appearance-none rounded-none relative block w-full pl-10 pr-10 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
-                    placeholder="Password" 
+                  <input
+                    id="password"
+                    name="password"
+                    type={showPassword ? 'text' : 'password'}
+                    autoComplete="current-password"
+                    required
+                    className="appearance-none rounded-none relative block w-full pl-10 pr-10 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Password"
                     {...register('password', { required: true })}
                   />
                   {showPassword ? (
@@ -203,8 +203,8 @@ const SignUp = () => {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#038C7F] hover:bg-[#038c7f7e] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 animate__animated animate__fadeInUp animate__delay-3s"
                 disabled={isSubmitting || isUsernameLoading}
               >
