@@ -4,7 +4,8 @@ import 'tailwindcss/tailwind.css';
 import { Mail, Eye, EyeOff } from 'lucide-react';
 import { apiLogin } from '../../services/auth';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../../components/Loader';
 import { useForm } from 'react-hook-form';
 
@@ -36,7 +37,18 @@ const Login = () => {
       console.log("Response: ", res.data);
       addToLocalStorage(res.data.accessToken, res.data.user);
 
-      toast.success(res.data.message);
+      // Display success toast at the top right corner
+      toast.success(res.data.message, {
+        position: "top-right",
+        autoClose: 2000, // Toast auto-closes after 2 seconds
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        className: "animate__animated animate__slideInRight",
+      });
+
       setTimeout(() => {
         navigate("/dashboard");
       }, 2000); // Adjusted to 2 seconds
@@ -50,6 +62,7 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
+      <ToastContainer />
       <div className="p-10 bg-white rounded-lg shadow-xl animate__animated animate__bounceIn animate__delay-1s">
         <h1 className="text-5xl font-extrabold text-center text-[#038C7F] animate__animated animate__pulse animate__infinite">
           DevLink!
