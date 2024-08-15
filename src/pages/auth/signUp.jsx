@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import Loader from '../../components/Loader';
 import { debounce } from 'lodash';
 import { useForm } from 'react-hook-form';
+import signImage from '../../assets/images/sign.jpeg';
 
 const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -101,8 +102,13 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-[#1d2634] mt-12">
-      <div className="p-10 bg-white rounded-lg shadow-xl animate__animated animate__bounceIn animate__delay-1s">
+    <div className="relative flex items-center justify-center h-screen mt-12">
+      <img
+        src={signImage}
+        alt="Sign Up Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="relative p-10 bg-white bg-opacity-70 backdrop-blur-md rounded-lg shadow-xl animate__animated animate__bounceIn animate__delay-1s">
         <h1 className="text-5xl font-extrabold text-center text-[#038C7F] animate__animated animate__pulse animate__infinite">
           DevLink!
         </h1>

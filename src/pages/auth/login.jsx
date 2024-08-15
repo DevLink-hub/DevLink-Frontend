@@ -8,6 +8,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../../components/Loader';
 import { useForm } from 'react-hook-form';
+import loginImage from '../../assets/images/login.jpeg';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -61,9 +62,14 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-[#1d2634]">
+    <div className="relative flex items-center justify-center h-screen">
       <ToastContainer />
-      <div className="p-10 bg-white rounded-lg shadow-xl animate__animated animate__bounceIn animate__delay-1s">
+      <img
+        src={loginImage}
+        alt="Login Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="relative p-10 bg-white bg-opacity-70 backdrop-blur-md rounded-lg shadow-xl animate__animated animate__bounceIn animate__delay-1s">
         <h1 className="text-5xl font-extrabold text-center text-[#038C7F] animate__animated animate__pulse animate__infinite">
           DevLink!
         </h1>

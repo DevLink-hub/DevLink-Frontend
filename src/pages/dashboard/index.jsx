@@ -18,7 +18,7 @@ const data = [
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col mt-12">
+    <div className="flex flex-col mt-12 space-y-6">
       {/* Main Dashboard Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-lg shadow-lg text-white animate__animated animate__fadeIn">
         <motion.h2
@@ -30,27 +30,29 @@ const Dashboard = () => {
           You are almost ready to start earning money as a freelancer, simply complete the following steps:
         </motion.h2>
         <p className="text-gray-200 mb-2">about 23 hours ago</p>
-        <div className="flex items-center mb-4">
-          <EnvelopeIcon className="h-5 w-5 mr-2" />
-          <span>Email Address</span>
-          <button className="ml-auto text-gray-300">Already Verified</button>
-        </div>
-        <div className="flex items-center mb-4">
-          <UserIcon className="h-5 w-5 mr-2" />
-          <span>Update your profile</span>
-          <Link to="/profile" className="ml-auto bg-[#123834] text-white px-4 py-2 rounded-lg hover:bg-[#0f2e26] transition duration-300">
-            Profile Page
-          </Link>
-        </div>
-        <div className="flex items-center mb-4">
-          <ComputerDesktopIcon className="h-5 w-5 mr-2" />
-          <span>Place your first bid</span>
-          <button className="ml-auto text-[#038C7F] hover:underline transition duration-300">Browse Projects</button>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+          <div className="flex items-center mb-4 sm:mb-0">
+            <EnvelopeIcon className="h-5 w-5 mr-2" />
+            <span>Email Address</span>
+            <button className="ml-auto text-gray-300">Already Verified</button>
+          </div>
+          <div className="flex items-center mb-4 sm:mb-0">
+            <UserIcon className="h-5 w-5 mr-2" />
+            <span>Update your profile</span>
+            <Link to="/profile" className="ml-auto bg-[#123834] text-white px-4 py-2 rounded-lg hover:bg-[#0f2e26] transition duration-300">
+              Profile Page
+            </Link>
+          </div>
+          <div className="flex items-center">
+            <ComputerDesktopIcon className="h-5 w-5 mr-2" />
+            <span>Place your first bid</span>
+            <button className="ml-auto text-[#038C7F] hover:underline transition duration-300">Browse Projects</button>
+          </div>
         </div>
       </div>
 
       {/* Statistics Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-6 bg-white rounded-lg shadow-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-white rounded-lg shadow-lg">
         {[
           { title: 'PRODUCTS', icon: <BsFillArchiveFill />, value: '300', gradient: 'bg-gradient-to-r from-green-400 to-blue-500' },
           { title: 'CATEGORIES', icon: <BsFillGrid3X3GapFill />, value: '12', gradient: 'bg-gradient-to-r from-red-400 to-yellow-500' },
@@ -59,12 +61,12 @@ const Dashboard = () => {
         ].map((card, index) => (
           <motion.div
             key={index}
-            className={`card p-4 rounded-lg shadow-lg text-white ${card.gradient}`}
+            className={`p-4 rounded-lg shadow-lg text-white ${card.gradient}`}
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex justify-between items-center">
+            <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold">{card.title}</h3>
               {card.icon}
             </div>
