@@ -44,7 +44,7 @@ const Profile = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-6 mt-12"
+      className="container mx-auto p-6 mt-12 bg-[#1d2634]"
       initial="hidden"
       animate="visible"
       variants={formVariants}
