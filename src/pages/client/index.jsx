@@ -9,8 +9,6 @@ const formVariants = {
 
 const ClientProfile = () => {
   const [profileData, setProfileData] = useState({
-    coverPhoto: '',
-    profilePhoto: '',
     companyName: '',
     location: '',
     industry: '',
@@ -19,7 +17,6 @@ const ClientProfile = () => {
     companyPhone: '',
     bio: '',
     socialLink: '',
-    user: '',
     projects: '',
   });
 
@@ -38,7 +35,7 @@ const ClientProfile = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-6 mt-12"
+      className="container mx-auto p-6 mt-12 bg-gradient-to-r from-purple-400 to-[#78FEC1]"
       initial="hidden"
       animate="visible"
       variants={formVariants}
@@ -55,13 +52,13 @@ const ClientProfile = () => {
         <div className="flex justify-center space-x-8 mb-6">
           <button
             onClick={() => setActiveTab('profileDetails')}
-            className={`py-2 px-4 text-gray-600 border-b-2 ${activeTab === 'profileDetails' ? 'border-blue-500' : 'border-transparent'} focus:outline-none`}
-          >
+            className={`py-2 px-4 rounded-md text-white border-2 transition-colors ${activeTab === 'profileDetails' ? 'bg-[#1B627E] border-[#1B627E]' : 'bg-[#1B627E] border-[#1B627E]'} focus:outline-none`}
+            >   
             Profile Details
           </button>
           <button
             onClick={() => setActiveTab('projects')}
-            className={`py-2 px-4 text-gray-600 border-b-2 ${activeTab === 'projects' ? 'border-blue-500' : 'border-transparent'} focus:outline-none`}
+            className={`py-2 px-4 rounded-md text-white border-2 transition-colors ${activeTab === 'projects' ? 'bg-[#1B627E] border-[#1B627E]' : 'bg-[#1B627E] border-[#1B627E]'} focus:outline-none`}
           >
             Projects
           </button>
@@ -91,7 +88,7 @@ const ClientProfile = () => {
               ))}
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="px-4 py-2 bg-[#1B627E] text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
               >
                 Save Profile
               </button>

@@ -8,7 +8,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../../components/Loader';
 import { useForm } from 'react-hook-form';
-import loginImage from '../../assets/images/login.jpeg';
+import logImage from '../../assets/images/log.jpeg';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -65,7 +65,7 @@ const Login = () => {
     <div className="relative flex items-center justify-center h-screen">
       <ToastContainer />
       <img
-        src={loginImage}
+        src={logImage}
         alt="Login Background"
         className="absolute inset-0 w-full h-full object-cover"
       />

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import landImage from '../../assets/images/land.png';
+import Card from '../../components/Card.jsx';
+import codeImage from '../../assets/images/code.jpg';
+import programImage from '../../assets/images/program.jpg';
+import serviceImage from '../../assets/images/service.jpg';
+import phpImage from '../../assets/images/php.jpg';
 
 const Landing = () => {
   const [skill, setSkill] = useState('');
@@ -16,7 +21,7 @@ const Landing = () => {
   return (
     <div>
       {/* First Section */}
-      <div className="relative h-screen bg-gradient-to-r from-purple-400 to-[#78FEC1] flex flex-col lg:flex-row items-center lg:items-start p-6 lg:p-12 mt-4">
+      <div className="relative h-auto lg:h-screen bg-gradient-to-r from-purple-400 to-[#78FEC1] flex flex-col lg:flex-row items-center lg:items-start p-6 lg:p-12 mt-4">
         <div className="w-full lg:w-2/3 mb-8 lg:mb-0">
           <div className="mb-8">
             <button className="bg-green-200 text-green-700 font-bold py-2 px-4 rounded-lg">
@@ -48,7 +53,7 @@ const Landing = () => {
               Search
             </button>
           </div>
-          <div className="flex flex-wrap justify-center lg:justify-start mb-8 space-x-4">
+          <div className="flex flex-wrap justify-center lg:justify-start mb-8 space-x-2 lg:space-x-4">
             {['Designer', 'Developer', 'Web', 'IOS', 'PHP', 'Senior'].map((tab) => (
               <button
                 key={tab}
@@ -62,7 +67,7 @@ const Landing = () => {
               </button>
             ))}
           </div>
-          <div className="absolute bottom-16 left-4 bg-white text-black py-2 px-4 rounded-full text-xs lg:text-sm">
+          <div className="absolute bottom-20 left-4 bg-white text-black py-2 px-4 rounded-full text-xs lg:text-sm">
             +12M Project Completed
           </div>
           <div className="absolute bottom-4 left-4 bg-white text-black py-2 px-4 rounded-full text-xs lg:text-sm">
@@ -78,8 +83,49 @@ const Landing = () => {
         </div>
       </div>
       {/* Second Section */}
-      {/* Add content for the second section here if needed */}
-
+      <div className="py-12 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Featured Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card
+              title="Management software to help you manage your mobile"
+              description="Development & IT"
+              rating="4.5"
+              reviews="2"
+              startingPrice="89"
+              imageUrl={serviceImage}
+              author="Ali Tufan"
+            />
+            <Card
+              title="Web development, with HTML, CSS, JavaScript and PHP"
+              description="Development & IT"
+              rating="4.5"
+              reviews="2"
+              startingPrice="69"
+              imageUrl={phpImage}
+              author="Agent Paku"
+            />
+            <Card
+              title="Developers drop the framework folder into a new"
+              description="Design & Creative"
+              rating="4.5"
+              reviews="2"
+              startingPrice="128"
+              imageUrl={codeImage}
+              author="John Powell"
+            />
+            <Card
+              title="Flexibility & Customization with CMS vs PHP Framework"
+              description="Development & IT"
+              rating="5.0"
+              reviews="1"
+              startingPrice="69"
+              imageUrl={programImage}
+              author="Thomas Paul"
+            />
+          </div>
+        </div>
+      </div>
       {/* Third Section */}
       <div className="h-auto flex flex-col justify-center items-center bg-[#F8F9FA] p-6 lg:p-12">
         <div className="text-center mb-6">

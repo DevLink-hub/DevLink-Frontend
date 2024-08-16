@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import Loader from '../../components/Loader';
 import { debounce } from 'lodash';
 import { useForm } from 'react-hook-form';
-import signImage from '../../assets/images/sign.jpeg';
+import signsImage from '../../assets/images/signs.jpeg';
 
 const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -104,7 +104,7 @@ const SignUp = () => {
   return (
     <div className="relative flex items-center justify-center h-screen mt-12">
       <img
-        src={signImage}
+        src={signsImage}
         alt="Sign Up Background"
         className="absolute inset-0 w-full h-full object-cover"
       />

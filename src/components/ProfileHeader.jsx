@@ -56,7 +56,7 @@ const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto }) => {
           style={{ display: 'none' }}
           onChange={handleCoverPhotoChange}
         />
-        <label htmlFor="coverPhotoUpload" className="absolute top-2 right-2 bg-white py-1 px-3 border rounded-md shadow-md cursor-pointer">
+        <label htmlFor="coverPhotoUpload" className="absolute top-2 right-2 bg-[#1B627E] text-white py-1 px-3 border rounded-md shadow-md cursor-pointer">
           Upload Cover Photo
         </label>
       </div>
@@ -131,14 +131,14 @@ const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto }) => {
               </div>
               <button
                 type="submit"
-                className="mt-2 bg-blue-600 text-white py-2 px-4 rounded-md"
+                className="mt-2 bg-[#1B627E] text-white py-2 px-4 rounded-md"
               >
                 Save
               </button>
             </form>
           )}
         </div>
-        <button className="ml-auto bg-white py-1 px-3 border rounded-md shadow-md" onClick={onViewClient}>
+        <button className="ml-auto bg-[#1B627E] text-white py-1 px-3 border rounded-md shadow-md" onClick={onViewClient}>
           View Client Profile
         </button>
       </div>
