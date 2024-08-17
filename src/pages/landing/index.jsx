@@ -19,37 +19,32 @@ const Landing = () => {
   };
 
   return (
-    <div>
+    <div className="w-full">
       {/* First Section */}
-      <div className="relative h-auto lg:h-screen bg-gradient-to-r from-purple-400 to-[#78FEC1] flex flex-col lg:flex-row items-center lg:items-start p-6 lg:p-12 mt-4">
+      <div className="relative h-auto lg:h-screen bg-gradient-to-r from-purple-400 to-[#78FEC1] flex flex-col lg:flex-row items-center lg:items-start p-6 lg:p-12 mt-12">
         <div className="w-full lg:w-2/3 mb-8 lg:mb-0">
-          <div className="mb-8">
-            <button className="bg-green-200 text-green-700 font-bold py-2 px-4 rounded-lg">
-              Get Started
-            </button>
-          </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
             Freelance Services For Your Business
           </h1>
-          <p className="text-base md:text-lg mb-8">
-            Work with talented people at the most affordable price to get the most out of your time and cost
+          <p className="text-base md:text-lg mb-8 text-center lg:text-left">
+            Work with talented people at the most affordable price to get the most out of your time and cost.
           </p>
           <div className="flex flex-col lg:flex-row lg:items-center mb-8 space-y-4 lg:space-y-0 lg:space-x-4">
             <input
               type="text"
               placeholder="What are you looking for?"
-              className="py-2 px-4 rounded-l-full outline-none border border-gray-300 flex-1"
+              className="py-2 px-4 rounded-full outline-none border border-gray-300 flex-1"
               value={skill}
               onChange={(e) => setSkill(e.target.value)}
             />
             <input
               type="text"
               placeholder="City, state, or zip"
-              className="py-2 px-4 outline-none border border-gray-300 flex-1"
+              className="py-2 px-4 rounded-full outline-none border border-gray-300 flex-1"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
-            <button className="bg-black text-white py-2 px-4 rounded-r-full" onClick={handleSearch}>
+            <button className="bg-black text-white py-2 px-4 rounded-full" onClick={handleSearch}>
               Search
             </button>
           </div>
@@ -126,8 +121,8 @@ const Landing = () => {
           </div>
         </div>
       </div>
-        {/* New Section */}
-        <div className="py-12 bg-white">
+      {/* New Section */}
+      <div className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[

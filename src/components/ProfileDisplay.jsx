@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProfileDisplay = ({ profile = {}, education = [], workExperience = [], portfolio = [] }) => {
   return (
-    <div className="pt-40 space-y-8">
+    <div className="pt-40 space-y-8 ">
       {/* Education Section */}
       <div className="text-center">
         <h2 className="text-xl mb-4">Education</h2>

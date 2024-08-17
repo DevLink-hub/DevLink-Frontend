@@ -59,7 +59,7 @@ const Profile = () => {
       {/* Main Content */}
       <div className="flex flex-col mt-6">
         {/* Tabs */}
-        <div className="flex justify-center space-x-4 mb-6">
+        <div className="flex justify-center space-x-4 mb-6 ">
           <button
             onClick={() => setActiveTab('education')}
             className={`py-2 px-4 rounded-md text-white border-2 transition-colors ${activeTab === 'education' ? 'bg-[#1B627E] border-[#1B627E]' : 'bg-[#1B627E] border-[#1B627E]'} focus:outline-none`}

@@ -48,7 +48,7 @@ const ProfileHeader = ({ initialCoverPhoto, initialProfilePhoto }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="h-40 bg-cover bg-center" style={{ backgroundImage: `url(${coverPhoto})` }}>
         <input
           type="file"

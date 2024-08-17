@@ -1,83 +1,99 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import webImage from '../../assets/images/web.jpg';
 import chromeImage from '../../assets/images/chrome.jpg';
 import geolocationImage from '../../assets/images/geolocation.jpg';
+import richImage from '../../assets/images/rich.jpg';
+import jamesImage from '../../assets/images/james.jpg';
 
 const Find = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleApplyClick = () => {
+    navigate('/signup'); // Redirect to the /signup page
+  };
+
   return (
     <div className="p-4 border-2 border-gray-200 rounded-lg mt-12">
-      {/* Search Section */}
-      <div className="flex items-center space-x-4 mb-4">
-        <input
-          type="text"
-          placeholder="Search Keyword"
-          className="p-2 border border-gray-300 rounded-lg flex-grow"
-        />
-        <button className="bg-[#123834] text-white px-4 py-2 rounded-lg">Search</button>
-      </div>
-
-      {/* Filter Section */}
-      <div className="flex space-x-4 mb-4">
-        <div className="w-1/4 border p-4 rounded-lg">
-          <h2 className="font-bold mb-2 text-[#038C7F]">My recent searches</h2>
-          {/* Add recent searches here */}
-        </div>
-        <div className="w-1/4 border p-4 rounded-lg">
-          <h2 className="font-bold mb-2 text-[#038C7F]">Filter by:</h2>
-          <div className="mb-2">
-            <input type="checkbox" id="fixed-price" className="mr-2" />
-            <label htmlFor="fixed-price">Fixed Price Projects</label>
-          </div>
-          <div className="flex space-x-2 mb-2">
-            <input
-              type="number"
-              placeholder="min"
-              className="p-2 border border-gray-300 rounded-lg w-1/2"
-            />
-            <input
-              type="number"
-              placeholder="max"
-              className="p-2 border border-gray-300 rounded-lg w-1/2"
-            />
-          </div>
-          <div>
-            <input type="checkbox" id="hourly" className="mr-2" />
-            <label htmlFor="hourly">Hourly Projects</label>
-          </div>
-        </div>
-      </div>
-
-      {/* Job Listing Section */}
+      {/* Profile Section */}
       <div className="border p-4 rounded-lg">
-        <div className="flex justify-between items-center mb-4">
-          <select className="p-2 border border-gray-300 rounded-lg ">
-            <option>Newest first</option>
-            {/* Add other options here */}
-          </select>
-          <span>40 jobs found</span>
-        </div>
-        <div className="border-t p-4">
-          <h3 className="font-bold text-[#038C7F]">Instagram-Style AD Integration to Webview</h3>
-          <div className="flex justify-between items-center">
-            <span>6 days left</span>
-            <span>$1292 Avg Bid</span>
+        <div className="flex">
+          <img
+            src={richImage}
+            alt="Profile"
+            className="w-48 h-48 rounded-lg mr-4"
+          />
+          <div className="flex-grow">
+            <h2 className="text-2xl font-bold">Richard Parker</h2>
+            <p className="text-green-500">is available to hire</p>
+            <button 
+              onClick={handleApplyClick} // Attach the click handler to the button
+              className="bg-[#1B627E] text-white px-4 py-2 rounded-lg mt-2"
+            >
+              APPLY
+            </button>
+            <div className="mt-4">
+              <h3 className="font-bold">WEB DEVELOPERS</h3>
+              <p>Seeking a talented Web Developer to join our dynamic team. The ideal candidates will have experience in building responsive and interactive websites using modern web technologies. <br />
+              You will collaborate with our design and development teams to create seamless user experiences.</p>
+            </div>
+            <div className="mt-4 flex space-x-4 text-white">
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">JAVASCRIPT</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">ANGULAR</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">HTML</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">REACT</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">Next.js</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">MERN</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">Vue</span>
+            </div>
           </div>
-          <p>I'm seeking a skilled developer to create a responsive webapp to integrate via webview...</p>
         </div>
-        {/* Additional Job Listings */}
-        <div className="border-t p-4">
-          <h3 className="font-bold text-[#038C7F]">Full-Stack Web Development with API and DevOps</h3>
-          <div className="flex justify-between items-center">
-            <span>6 days left</span>
-            <span>$1292 Avg Bid</span>
+        <div className="mt-4 flex justify-between">
+          <div>
+            <h3 className="font-bold">Availability</h3>
+            <p>Full-time</p>
           </div>
-          <p>I'm looking for a skilled full-stack developer to handle the complete development of a web application. This project involves:</p>
-          <li>Web Front-end Development: I need the website to have a responsive design, interactive elements, and user registration/login functionality.</li>
-          <li>API Development: While I'm open to suggestions, I'd ideally prefer the use of Python or Node.js for the API.</li>
-          <li>Backend Development: - Scalability: The backend should be built with scalability in mind, as I'm looking to grow</li>
         </div>
-        {/* Additional Job Listings */}
-        {/* ... Other job listings ... */}
+      </div>
+
+      <div className="border p-4 rounded-lg">
+        <div className="flex">
+          <img
+            src={jamesImage}
+            alt="Profile"
+            className="w-48 h-48 rounded-lg mr-4"
+          />
+          <div className="flex-grow">
+            <h2 className="text-2xl font-bold">James Ayden</h2>
+            <p className="text-green-500">is available to hire</p>
+            <button 
+              onClick={handleApplyClick} // Attach the click handler to the button
+              className="bg-[#1B627E] text-white px-4 py-2 rounded-lg mt-2"
+            >
+              APPLY
+            </button>
+            <div className="mt-4">
+              <h3 className="font-bold">AWS CLOUD PRACTITIONERS</h3>
+              <p>I am seeking for AWS Cloud Practitioners with experience in cloud computing, a deep understanding of AWS services, <br /> 
+              and the ability to collaborate with infrastructure and development teams for seamless cloud resource management.</p>
+            </div>
+            <div className="mt-4 flex space-x-4 text-white">
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">AWS EC2</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">AWS RDS</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">AWS S3</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">AWS EBS</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">AWS IAM</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">CLOUDFRONT</span>
+              <span className="border rounded-full px-2 py-0 bg-[#1B627E] border-[#1B627E]">AWS LAMBDA</span>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 flex justify-between">
+          <div>
+            <h3 className="font-bold">Availability</h3>
+            <p>Remote</p>
+          </div>
+        </div>
       </div>
 
       {/* Recommended Articles Section */}
@@ -124,6 +140,6 @@ const Find = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Find;
