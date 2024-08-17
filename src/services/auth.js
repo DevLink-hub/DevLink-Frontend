@@ -1,11 +1,11 @@
 import { apiClient, clearDetails } from "./config";
 
 export const apiSignUp = async (payload) => {
-  return apiClient.post("/signup", payload);
+  return apiClient.post("/users/signup", payload);
 };
 
 export const apiLogin = async (payload) => {
-  return apiClient.post("/token", payload);
+  return apiClient.post("/users/token", payload);
 };
 
 export const apiLogout = async () => {

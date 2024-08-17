@@ -126,6 +126,35 @@ const Landing = () => {
           </div>
         </div>
       </div>
+        {/* New Section */}
+        <div className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              'Web Development',
+              'Mobile Development',
+              'DevOps & Cloud Computing',
+              'Data Science & AI',
+              'UX/UI Designers',
+              'Database & Big Data Technologies',
+              'Programming Languages',
+              'CMS Platforms',
+              'Software Development Roles & Collaboration Models',
+              'E-commerce & CRM Platforms',
+              'Quality Assurance & Testing',
+              'Visual & Brand Design',
+              'API Development & Integration',
+              'Product & Project Management'
+            ].map((category) => (
+              <div key={category} className="flex justify-between items-center border-b border-gray-300 py-2">
+                <span>{category}</span>
+                <span className="text-xl font-bold">+</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Third Section */}
       <div className="h-auto flex flex-col justify-center items-center bg-[#F8F9FA] p-6 lg:p-12">
         <div className="text-center mb-6">

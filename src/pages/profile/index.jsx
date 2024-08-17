@@ -44,7 +44,7 @@ const Profile = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-6 mt-12 bg-gradient-to-r from-purple-400 to-[#78FEC1]"
+      className="mx-auto p-6 mt-12 bg-gradient-to-r from-purple-400 to-[#78FEC1]"
       initial="hidden"
       animate="visible"
       variants={formVariants}
@@ -179,7 +179,7 @@ const Profile = () => {
                       {item.image && (
                         <div className="mt-4">
                           <img
-                            src={URL.createObjectURL(item.image)}
+                            // src={`https://savefiles.org/${data?.userPortfolio?.}?shareable_link=279`}
                             alt={item.projectName}
                             className="w-full h-40 object-cover rounded-lg"
                           />

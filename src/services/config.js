@@ -29,7 +29,7 @@ export const clearDetails = () => {
 apiClient.interceptors.request.use(
   (config) => {
     // Check if there's a token in localStorage
-    const token = getDetails();
+    const { token } = getDetails();
     if (token) {
       // Set the token in the Authorization header
       config.headers.Authorization = `Bearer ${token}`;

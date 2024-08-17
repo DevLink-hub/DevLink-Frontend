@@ -35,7 +35,7 @@ const ClientProfile = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-6 mt-12 bg-gradient-to-r from-purple-400 to-[#78FEC1]"
+      className="mx-auto p-6 mt-12 bg-gradient-to-r from-purple-400 to-[#78FEC1]"
       initial="hidden"
       animate="visible"
       variants={formVariants}
